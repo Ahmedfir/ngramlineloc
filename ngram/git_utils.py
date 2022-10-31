@@ -3,7 +3,7 @@ import os
 import sys
 
 
-from cmd_utils import safe_chdir
+from ngram.cmd_utils import safe_chdir
 
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
