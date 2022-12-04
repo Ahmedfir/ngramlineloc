@@ -89,7 +89,7 @@ class NgramFlRequest:
                 res = res + " -tokenizer=" + self.tokenizer
             return res
         else:
-            log.error('MbertLocationsRequest failed to collect any input files {0}'.format(self.repo_path))
+            log.error('NgramFlRequest failed to collect any input files {0}'.format(self.repo_path))
             return None
 
     def preprocess(self) -> bool:
@@ -102,7 +102,7 @@ class NgramFlRequest:
             return False
         cmd = "JAVA_HOME='" + jdk_path + "' " + join(jdk_path, 'bin',
                                                      'java') + " -jar " + tuna_fl_jar + " " + request
-        log.info("call mbert cmd ... {0}".format(cmd))
+        log.info("call cmd ... {0}".format(cmd))
 
         output = shellCallTemplate(cmd)
         log.info(output)
